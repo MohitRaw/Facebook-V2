@@ -1,7 +1,6 @@
 import firebase from "firebase";
 import "firebase/storage";
 
-
 const firebaseConfig = {
   apiKey: "AIzaSyB-Bpy1VQIVsLd1Fs0yaTNiTHTSevwaioM",
   authDomain: "facebook-v2-clone-fbe82.firebaseapp.com",
@@ -11,11 +10,13 @@ const firebaseConfig = {
   appId: "1:737216261745:web:d51a341675d89678a7b5d0"
 };
 
-  const app = !firebase.apps.length
+
+const app = !firebase.apps.length
   ? firebase.initializeApp(firebaseConfig)
   : firebase.app();
 
 const db = app.firestore();
+const auth = app.auth();
 const storage = firebase.storage();
 
-export { db, storage };
+export { auth, db, storage };
