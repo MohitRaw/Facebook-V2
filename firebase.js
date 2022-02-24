@@ -11,12 +11,8 @@ const firebaseConfig = {
 };
 
 
-const app = !firebase.apps.length
-  ? firebase.initializeApp(firebaseConfig)
-  : firebase.app();
-
+const app = !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();
 const db = app.firestore();
-const auth = app.auth();
 const storage = firebase.storage();
 
-export { auth, db, storage };
+export { db, storage };
